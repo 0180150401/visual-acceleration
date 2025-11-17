@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay 3 - Visual Acceleration</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="sidebar">
+        <h1 class="site-title"><a href="../index.html">Visual Acceleration Analysis</a></h1>
+        <p class="site-sub">Sebastian Roda</p>
+    </header>
+    <main class="essay-main">
+        <h1 class="essay-title">Operational Images</h1>
+        <div class="essay-images">
+            <img src="3/IMG_5671.PNG" alt="Essay 3 - Image 1">
+            <img src="3/ios-17-iphone-15-pro-use-face-id-hero.png" alt="Essay 3 - iPhone Face ID">
+            <img src="3/snapchat-face-id.webp" alt="Essay 3 - Snapchat Face ID">
+            <video controls autoplay muted loop playsinline width="100%" style="background: #000;">
+                <source src="3/Video-177.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+    <script>
+        // Debug: Log actual resolved URLs
+        console.log('=== Media file check ===');
+        
+        document.querySelectorAll('video').forEach((video, index) => {
+            const source = video.querySelector('source');
+            console.log(`Video ${index + 1} source:`, source.src);
+            
+            video.addEventListener('error', function(e) {
+                console.error(`Video ${index + 1} ERROR:`, video.error);
+                console.error('  Source URL:', source.src);
+            });
+            
+            video.addEventListener('loadedmetadata', function() {
+                console.log(`✓ Video ${index + 1} loaded`);
+            });
+        });
+        
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.addEventListener('error', function() {
+                console.error(`✗ Image ${index + 1} failed:`, img.src);
+            });
+            img.addEventListener('load', function() {
+                console.log(`✓ Image ${index + 1} loaded`);
+            });
+        });
+    </script>
+</body>
+</html>
+

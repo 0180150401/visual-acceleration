@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay 1 - Visual Acceleration</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="sidebar">
+        <h1 class="site-title"><a href="../index.html">Visual Acceleration Analysis</a></h1>
+        <p class="site-sub">Sebastian Roda</p>
+    </header>
+    <main class="essay-main">
+        <h1 class="essay-title">Aesthetic Velocity (Speed as Aesthetic Condition)</h1>
+        <div class="essay-images">
+            <video controls autoplay muted loop playsinline width="100%" style="background: #000;">
+                <source src="1/Screen%20Recording%202025-11-17%20at%201.22.00%E2%80%AFAM.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls autoplay muted loop playsinline width="100%" style="background: #000;">
+                <source src="1/Screen%20Recording%202025-11-17%20at%201.39.47%E2%80%AFAM.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls autoplay muted loop playsinline width="100%" style="background: #000;">
+                <source src="1/Screen%20Recording%202025-11-17%20at%201.40.44%E2%80%AFAM.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls autoplay muted loop playsinline width="100%" style="background: #000;">
+                <source src="1/Screen%20Recording%202025-11-17%20at%201.48.23%E2%80%AFAM.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="1/Screenshot%202025-11-17%20at%201.23.49%E2%80%AFAM.png" alt="Essay 1 - Screenshot 2025-11-17 at 1.23.49 AM.png">
+            <img src="1/US_Ecommerce_Sales_2013_2023_47bea298-4c50-4ca6-8aa4-438f1def20d5.webp" alt="Essay 1 - US_Ecommerce_Sales_2013_2023_47bea298-4c50-4ca6-8aa4-438f1def20d5.webp">
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('video').forEach((video, index) => {
+            video.addEventListener('error', function(e) {
+                console.error(`Video ${index + 1} ERROR:`, video.error);
+            });
+            video.addEventListener('loadedmetadata', function() {
+                console.log(`✓ Video ${index + 1} loaded`);
+            });
+        });
+        
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.addEventListener('error', function() {
+                console.error(`✗ Image ${index + 1} failed:`, img.src);
+            });
+            img.addEventListener('load', function() {
+                console.log(`✓ Image ${index + 1} loaded`);
+            });
+        });
+    </script>
+</body>
+</html>

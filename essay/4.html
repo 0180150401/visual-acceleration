@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay 4 - Visual Acceleration</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="sidebar">
+        <h1 class="site-title"><a href="../index.html">Visual Acceleration Analysis</a></h1>
+        <p class="site-sub">Sebastian Roda</p>
+    </header>
+    <main class="essay-main">
+        <h1 class="essay-title">Poor Images (Circulation > Resolution)</h1>
+        <div class="essay-images">
+            <img src="4/IMG_5689.PNG" alt="Essay 4 - IMG_5689.PNG">
+            <img src="4/IMG_5690.PNG" alt="Essay 4 - IMG_5690.PNG">
+            <img src="4/IMG_5691.PNG" alt="Essay 4 - IMG_5691.PNG">
+            <img src="4/IMG_5692.PNG" alt="Essay 4 - IMG_5692.PNG">
+            <img src="4/IMG_5693.PNG" alt="Essay 4 - IMG_5693.PNG">
+            <img src="4/IMG_5694.PNG" alt="Essay 4 - IMG_5694.PNG">
+            <img src="4/IMG_5695.PNG" alt="Essay 4 - IMG_5695.PNG">
+            <img src="4/IMG_5696.PNG" alt="Essay 4 - IMG_5696.PNG">
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('video').forEach((video, index) => {
+            video.addEventListener('error', function(e) {
+                console.error(`Video ${index + 1} ERROR:`, video.error);
+            });
+            video.addEventListener('loadedmetadata', function() {
+                console.log(`✓ Video ${index + 1} loaded`);
+            });
+        });
+        
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.addEventListener('error', function() {
+                console.error(`✗ Image ${index + 1} failed:`, img.src);
+            });
+            img.addEventListener('load', function() {
+                console.log(`✓ Image ${index + 1} loaded`);
+            });
+        });
+    </script>
+</body>
+</html>

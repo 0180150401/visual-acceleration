@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay 7 - Visual Acceleration</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="sidebar">
+        <h1 class="site-title"><a href="../index.html">Visual Acceleration Analysis</a></h1>
+        <p class="site-sub">Sebastian Roda</p>
+    </header>
+    <main class="essay-main">
+        <h1 class="essay-title">Visibility Labor</h1>
+        <div class="essay-images">
+            <img src="7/IMG_1748.JPG" alt="Essay 7 - IMG_1748.JPG">
+            <img src="7/IMG_1762.JPG" alt="Essay 7 - IMG_1762.JPG">
+            <img src="7/IMG_1765.JPG" alt="Essay 7 - IMG_1765.JPG">
+            <img src="7/IMG_5239.jpeg" alt="Essay 7 - IMG_5239.jpeg">
+            <img src="7/IMG_5246.jpeg" alt="Essay 7 - IMG_5246.jpeg">
+            <img src="7/IMG_5435.jpeg" alt="Essay 7 - IMG_5435.jpeg">
+            <img src="7/IMG_5500.jpeg" alt="Essay 7 - IMG_5500.jpeg">
+            <img src="7/IMG_7431.jpeg" alt="Essay 7 - IMG_7431.jpeg">
+            <img src="7/IMG_7784.jpeg" alt="Essay 7 - IMG_7784.jpeg">
+            <img src="7/IMG_7785.jpeg" alt="Essay 7 - IMG_7785.jpeg">
+            <img src="7/IMG_7941.jpeg" alt="Essay 7 - IMG_7941.jpeg">
+            <img src="7/IMG_7966.jpeg" alt="Essay 7 - IMG_7966.jpeg">
+            <img src="7/IMG_9252.jpeg" alt="Essay 7 - IMG_9252.jpeg">
+            <img src="7/IMG_9263.jpeg" alt="Essay 7 - IMG_9263.jpeg">
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('video').forEach((video, index) => {
+            video.addEventListener('error', function(e) {
+                console.error(`Video ${index + 1} ERROR:`, video.error);
+            });
+            video.addEventListener('loadedmetadata', function() {
+                console.log(`✓ Video ${index + 1} loaded`);
+            });
+        });
+        
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.addEventListener('error', function() {
+                console.error(`✗ Image ${index + 1} failed:`, img.src);
+            });
+            img.addEventListener('load', function() {
+                console.log(`✓ Image ${index + 1} loaded`);
+            });
+        });
+    </script>
+</body>
+</html>

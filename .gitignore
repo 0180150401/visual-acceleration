@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Temporary files
+*.tmp
+*.log
+
+# Large media files (exceed GitHub 100MB limit)
+# These files are kept locally but not pushed to GitHub
+essay/1/Screen Recording 2025-11-17 at 1.22.00 AM.mp4
+essay/1/Screen Recording 2025-11-17 at 1.40.44 AM.mp4
+essay/1/Screen Recording 2025-11-17 at 1.48.23 AM.mp4
+essay/2/2P0A1697-Edit.png
+
