@@ -226,11 +226,15 @@ main {
     object-fit: contain;
 }
 
-/* Display screenshot images in pairs - smaller and side by side */
-.essay-images img[src*=".PNG"],
-.essay-images img[src*=".png"],
-.essay-images img[src*=".jpg"],
-.essay-images img[src*=".jpeg"] {
+/* Vertical images (aspect ratio < 1) displayed in pairs */
+.essay-images img[data-orientation="vertical"] {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Horizontal images (aspect ratio >= 1) displayed full width */
+.essay-images img[data-orientation="horizontal"] {
+    grid-column: 1 / -1;
     max-width: 100%;
     margin: 0;
 }
