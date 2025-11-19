@@ -245,6 +245,15 @@ main {
     margin: 0 auto;
 }
 
+/* Larger images - can be applied to any image */
+.essay-images img[data-size="large"] {
+    grid-column: 1 / -1;
+    max-width: 120%;
+    margin: 0 auto;
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
 /* Small vertical images stay in pairs but are smaller */
 .essay-images img[data-orientation="vertical"][data-size="small"] {
     max-width: 100%;
