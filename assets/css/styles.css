@@ -239,6 +239,25 @@ main {
     margin: 0;
 }
 
+/* Smaller images - can be applied to any image */
+.essay-images img[data-size="small"] {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* Small vertical images stay in pairs but are smaller */
+.essay-images img[data-orientation="vertical"][data-size="small"] {
+    max-width: 60%;
+    margin: 0;
+}
+
+/* Small horizontal images are centered and smaller */
+.essay-images img[data-orientation="horizontal"][data-size="small"] {
+    grid-column: 1 / -1;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
 /* Keep videos and webp images full width */
 .essay-images video,
 .essay-images img[src*=".webp"] {
