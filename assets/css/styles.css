@@ -247,7 +247,13 @@ main {
 
 /* Small vertical images stay in pairs but are smaller */
 .essay-images img[data-orientation="vertical"][data-size="small"] {
-    max-width: 60%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Allow horizontal images to display in pairs when marked as vertical */
+.essay-images img[data-orientation="vertical"] {
+    max-width: 100%;
     margin: 0;
 }
 
