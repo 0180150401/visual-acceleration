@@ -264,8 +264,14 @@ main {
     margin: 0 auto;
 }
 
-/* Keep videos and webp images full width */
-.essay-images video,
+/* Videos displayed in pairs when they have data-pair attribute */
+.essay-images video[data-pair="true"] {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Videos without data-pair stay full width */
+.essay-images video:not([data-pair="true"]),
 .essay-images img[src*=".webp"] {
     grid-column: 1 / -1;
     max-width: 100%;
